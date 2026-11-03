@@ -1,5 +1,7 @@
 # Project configuration for the LLMOps course, filled in for you at onboarding.
 # Resources are provisioned at onboarding except the volume, which you create during the course.
+# embedding_endpoint is the serving endpoint for ai_query, AI Search and DatabricksServingEndpoint;
+# embedding_service is the AI Gateway model service for the OpenAI client (README.md).
 
 # Your usage policy: set it on every serverless job, endpoint and app you create.
 usage_policy_id: "faf0dfd7-bdcb-3a92-90af-803ea8e83eef"
@@ -13,9 +15,10 @@ dev:
   schema: "sergiu_icobescu"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "2c4025c8f56e5794"
-  experiment_path: "/llmops/sergiu_icobescu-dev"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "90b9d952bc098fdc"
+  experiment_path: "/llmops/sergiu-icobescu-dev"
   # Your provisioned Lakebase project.
   lakebase_instance: "lb-llmops-sergiu-icobescu"
 
@@ -25,9 +28,10 @@ acc:
   schema: "sergiu_icobescu"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "2c4025c8f56e5794"
-  experiment_path: "/llmops/sergiu_icobescu-acc"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "90b9d952bc098fdc"
+  experiment_path: "/llmops/sergiu-icobescu-acc"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-sergiu-icobescu"
 
@@ -37,8 +41,9 @@ prd:
   schema: "sergiu_icobescu"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "2c4025c8f56e5794"
-  experiment_path: "/llmops/sergiu_icobescu-prd"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "90b9d952bc098fdc"
+  experiment_path: "/llmops/sergiu-icobescu-prd"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-sergiu-icobescu"
